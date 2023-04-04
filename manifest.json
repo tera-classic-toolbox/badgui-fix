@@ -1,0 +1,10 @@
+{
+	"files": {
+		"index.js": "e20c005a56741927f7c78d8ddc62f8dbab510cf7a67d3d1abe9f3550b8476c1e",
+		"module.json": "55c5a3422eec83e58566fe03b0da67bc544420a450b5a1494d916b2c6d46695e",
+		"README.md": "f88b65524454db85062b188805aed658f1fca2f5ef78dd4dc90fd7a460f9cc94",
+		"ui/css/base.css": "6e0b3a2145c7d6e3b2f64ffe19859daf83e822490d446ec29cc1b9b897054b86",
+		"ui/index.html": "91c5a6032acc38aa4c9d7473b39da0eca6808ae8499bf5b52e295d231e4e33c1",
+		"ui/js/jquery-3.2.1.min.js": "87083882cc6015984eb0411a99d3981817f5dc5c90ba24f0940420c5548d82de"
+	}
+}

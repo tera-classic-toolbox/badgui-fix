@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="./css/base.css">
+		<script src="/_TERAToolbox/browserInit.js"></script>
+		<script src="./js/jquery-3.2.1.min.js"></script>
+		<script>
+			function uiRequest(event, data, callback) {
+				$.post({
+					traditional: true,
+					url: "/" + event,
+					contentType: "application/json",
+					data: JSON.stringify(data),
+					dataType: "json",
+					success: callback
+				});
+			}
+
+			window.addEventListener('error', function (e) {
+				alert('[UI] Error: ' + e.message)
+			});
+
+			window.onload = function () {
+				uiRequest("getTitle", {}, function (response) {
+					_tera_client_proxy_.resize_to(570, 600);
+					_tera_client_proxy_.set_title(response.title);
+				});
+
+				uiRequest("getBody", {}, function (response) {
+					const body = response.body
+						.replace(new RegExp("&#09;", "gm"), "\t")
+						.replace(new RegExp("size=\"\\+([^\"]+)\"", "gm"), function(_, matched) {
+							return matched > 3 ? "style=\"font-size:" + Math.floor(matched / 1.25) + "px\"" : ""
+						});
+
+					$("#body").html("<pre>" + body + "</pre>");
+
+					$("a").click(function (event) {
+						uiRequest("adminCommand", { "command": $(this).attr("href").slice(15) });
+					});
+				});
+			}
+		</script>
+	</head>
+	<div id="body"></div>
+</html>

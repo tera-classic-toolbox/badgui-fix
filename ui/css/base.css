@@ -1,0 +1,27 @@
+body, pre {
+	font-family: Arial, Helvetica, sans-serif;
+	overflow: hidden;
+	background: #000;
+	color: #fff;
+	margin: 10px;
+	display: flex;
+	overflow-y: auto;
+	word-spacing: -2px;
+}
+
+pre {
+	margin: 0;
+	display: inline;
+}
+
+font {
+	line-height: 160%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}

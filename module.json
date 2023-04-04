@@ -1,0 +1,10 @@
+{
+    "name": "badgui-fix",
+    "author": "HSDN",
+    "description": "",
+    "dependencies": {
+        "ui": "https://raw.githubusercontent.com/HakuryuuDom/ui/master/module.json"
+    },
+    "servers": ["https://raw.githubusercontent.com/tera-classic-toolbox/badgui-fix/master/"],
+    "disableAutoUpdate": false
+}
