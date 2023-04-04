@@ -6,7 +6,6 @@ body, pre {
 	margin: 10px;
 	display: flex;
 	overflow-y: auto;
-	word-spacing: -2px;
 }
 
 pre {
