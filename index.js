@@ -6,6 +6,7 @@ module.exports = function GuiFix(mod) {
 	let title = null;
 	let body = null;
 
+	ui.use(bodyParser.json());
 	ui.use(bodyParser.urlencoded({ "extended": true }));
 	ui.use(UI.static(`${__dirname}/ui`));
 
