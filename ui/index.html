@@ -36,6 +36,7 @@
 
 					$("a").click(function (event) {
 						uiRequest("adminCommand", { "command": $(this).attr("href").slice(15) });
+						return false;
 					});
 				});
 			}

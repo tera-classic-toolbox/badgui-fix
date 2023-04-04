@@ -6,7 +6,6 @@ module.exports = function GuiFix(mod) {
 	let title = null;
 	let body = null;
 
-	ui.use(bodyParser.json({ "limit": "50mb" }));
 	ui.use(bodyParser.urlencoded({ "extended": true }));
 	ui.use(UI.static(`${__dirname}/ui`));
 
@@ -27,7 +26,8 @@ module.exports = function GuiFix(mod) {
 		body = null;
 	});
 
-	ui.post("/adminCommand", (request) => {
+	ui.post("/adminCommand", (request, response) => {
 		mod.send("C_ADMIN", 1, { "command": request.body.command });
+		response.json({});
 	});
 };
