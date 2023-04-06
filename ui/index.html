@@ -27,6 +27,7 @@
 
 				uiRequest("getBody", {}, function (response) {
 					const body = response.body
+						.replace(new RegExp("&nbsp;&nbsp;", "gm"), "&nbsp; ")
 						.replace(new RegExp("&#09;", "gm"), "\t")
 						.replace(new RegExp("size=\"\\+([^\"]+)\"", "gm"), function(_, matched) {
 							return matched > 3 ? "style=\"font-size:" + Math.floor(matched / 1.25) + "px\"" : ""
